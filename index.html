@@ -24,8 +24,300 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					Blockchains, Bitcoins, and Smart Contracts
+				</section>
+				<section>
+					Presented to the first Roaring Fork Cryptocurrency and Blockchain Meetup.
+				</section>
+				<section>
+					<ul>
+					  <li> Ryan Grow </li>
+					  <li> ryangrow@gmail.com </li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Cryptocurrency</h2>
+						<ul>
+							<li>Uses a blockchain and cryptography for security.</li>
+							<li>Not issued by any central authority.</li>
+							<li>The amount of coins available is determined by transactions in the blockchain.</li>
+							<li>Network consensus is used to improve the network technology over time.</li>
+							<li>Coins are introduced to the blockchain via mining rewards.</li>
+						</ul>
+						</section>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						Who invented bitcoin?
+					</section>
+					<section>
+
+						<section>
+							Satoshi Nakamoto
+							<ul>
+								<li>Wrote the white paper "Bitcoin: A Peer-to-Peer Electronic Cash System" in 2009.</li>
+								<li>https://bitcoin.org/bitcoin.pdf</li>
+								<li>Invented blockchain technology for cryptocurrencies.</li>
+								<li>Estimated owned bitcoins: 980,000 bitcoins.</li>
+								<li>Worth almost 10 billion dollars in current market.</li>
+								<li>Nobody really knows who this person or group of people are.</li>
+								<li>Has since handed off control of bitcoin to other developers.</li>
+							</ul>
+						</section>
+					</section>
+
+					<section>
+						<h3>Blockchain Technology</h3>
+						A blockchain is a distributed ledger of transactions that is publicly verifiable and historically unchangeable.
+					</section>
+
+					<section>
+						Ledger
+						<ul>
+							<li>A ledger is a record of transactions.</li>
+							<li>Transactions on a blockchain describe the change of state in the ledger.</li>
+							<li>Groups of transactions are combined together by time into blocks.</li>
+							<li>The amount of time for each block generation varies by network.</li>
+							<li>Bitcoin blocks are generated every ten minutes</li>
+						</ul>
+					</section>
+					<section>
+						Distributed
+						<ul>
+							<li>A blockchain is a publicly available set of data.</li>
+							<li>A peer to peer network of nodes maintains the blockchain state.</li>
+							<li>Each node has a full copy of the blockchain.</li>
+							<li>The process of creating new blocks is called mining.</li>
+						</ul>
+					</section>
+					<section>
+						How large are blockchains?
+					</section>
+					<section>
+						<ul>
+							<li> Bitcoin Now: 144 Gig. </li>
+							<li> Bitcoin Upper Limit: 3TB. </li>
+							<li> Full mining nodes must download a copy of the whole blockchain. </li>
+							<li> The size of the blockchain is a challenge for scalability. </li>
+						</ul>
+					</section>
+					<section>
+							<img src="./bitcoin_blockchain_size.png"
+							<i>https://blockchain.info/charts/blocks-size?timespan=all</i>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h3>Some underlying technologies</h3>
+						<ul>
+							<li> Public Key Cryptography </li>
+							<li> Secure Hash Based Identifiers </li>
+							<li> Peer to Peer Networking</li>
+							<li> Proof of Work </li>
+						</ul>
+					</section>
+					<section>
+						<h3>Public Key Cryptography</h3>
+						<ul>
+							<li> An algorithm generates a public key and private key pair. </li>
+							<li> The private key must be kept secret by the owner. </li>
+							<li> The private and public keys are cryptographically related. </li>
+						</ul>
+					</section>
+					<section>
+						What is public key cryptography used for?
+						<ul>
+							<li> The holder of the private key can digitally sign a message. </li>
+							<li> The message signature can be verified with the public key. </li>
+							<li> 2 parties can communicate with each other and be assured that the sender holds the private key.</li>
+							<li> Control and security of the private key is critical. </li>
+						</ul>
+					</section>
+					<section>
+						Public Key Cryptography and the Bitcoin Blockchain
+						<ul>
+							<li> Blockchain addresses are based on the public key.</li>
+							<li> The holder of a private key can issue transactions from the associated Blockchain address.</li>
+							<li> A transaction can be issued to a bitcoin address with the sender's private key and the receiver's bitcoin address. </li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Encryption and Cryptography</h3>
+						<ul>
+							<li> A third party can encrypt a message with the receiver's public key. </li>
+							<li> The holder of the private key can decrypt messages that were encrypted with the private key.</li>
+							<li> Combined with signing, two parties can communicate with each other confidently and securely without any eavesdropping unless a third party has the privarte key</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Secure Hash Based Identifiers</h3>
+						<ul>
+							<li> Input: Any data of any length.</li>
+							<li> Output: A Fixed size alphanumeric string.</li>
+							<li> Example Output: 2b12fcf1b09288fcaff797d71e </li>
+							<li> Calculating a hash value for data is computationally easy.</li>
+							<li> It is computationally difficult to generate original text from a hash.</li>
+							<li> It is very unlikely that two different inputs yield the same hash.</li>
+						</ul>
+					</section>
+					<section>
+						<h3> Example Uses of Hash Functions </h3>
+						<ul>
+							<li> Password authentication </li>
+							<li> The best practice method for authenticating is to never save the password on the server. Only store a hash of the password.</li>
+							<li> Source Code Versioning </li>
+							<li> In git, a cryptographic hash is used to identify the entire state of all files within a version of blockchain node software</li>
+							<li> Blockchains </li>
+							<li> Hash functions are used to uniquely identify transactions, blocks, and the entire blockchain sequence. </li>
+							<li> Each block has a final hash key that is dependent upon all transactions in that block, as well as all blocks that have been mined previously </li>
+						</ul>
+					</section>
+
+					<section>
+						Peer to Peer Networks
+						<ul>
+							<li> A network of nodes which follow a protocol to communicate with each other. </li>
+							<li> Unlike client/server with two tiers. </li>
+							<li> Bittorrent is a peer to peer network for sharing files. </li>
+							<li> Blockchain mining is done on peer to peer networks. </li>
+						</ul>
+					</section>
+
+						<section>
+							Proof of Work
+							<ul>
+								<li> A mathematical problem that is difficult to solve. </li>
+								<li> The solution to the problem is easy to validate. </li>
+								<li> A node proves that it performed work by solving the problem. </li>
+								<li> The network reaches consensus as other nodes validate the solution.</li>
+							</ul>
+						</section>
+
+						<section>
+							Bitcoin Proof of work
+							<ul>
+								<li> A mining node generates a hash code for the block of transactions. </li>
+								<li> The hash code must start with a number of leading zeros. </li>
+								<li> The node can generate different hash codes by changing one value in the transaction called the Nonce. </li>
+								<li> The node will continue to make attempts until it generates a matching hash. </li>
+								<li> The first node to find the matching hash wins the mining award. </li>
+							</ul>
+						</section>
+
+						<section>
+							Increasing the difficulty in Bitcoin Over Time
+							<ul>
+								<li> Periodically, the number of required leading zeros is increased. </li>
+							</ul>
+						</section>
+
+						<section>
+							Proof of work uses a lot of energy globally as each node tries to mine each subsequent block.
+						</section>
+
+						<section>
+							Proof of Stake is an alternative mechanism that determines the miner for each block based on the percentage
+							of currency assigned to an account for the miner.
+
+							This saves energy by limiting the number of nodes that will attempt to mine the next block, and the mathematical
+							problem no longer needs to be difficult to solve. It could possibly be as simple as creating the correct hash.
+						</section>
+
+
+					<section>
+						<h3>Distributed Open Source Software Development</h3>
+						<ul>
+							<li> Open source software is developed by individuals and companies which collaborate globally. </li>
+							<li> Open source licenses allow others to use and modify code without paying money. </li>
+							<li> Sites such as github.com are the 'coding networking' hub for open source development. </li>
+							<li> The software for running each type of node is developed in a collaborative environment. </li>
+							<li> Nodes for the same blockchain can and are implemented in different languages </li>
+						</ul>
+						</section>
+
+
+				</section>
+				<section>
+				  <section>
+						<h3>Ethereum Blockchain</h3>
+						<ul>
+							<li> Invented by Vitalik Buterin 2013. </li>
+							<li> Age 23 today. </li>
+						  <li>Ethereum implements smart contracts in the blockchain.</li>
+						</ul>
+					</section>
+
+					<section>
+						<ul>
+							<li> A smart contract is a computer program that runs on a virtual machine in the blockchain. </li>
+							<li> A virtual machine is a computer that is implemented in software by each node. </li>
+							<li> The blockchain contains both the computer program, and the state that it generates when transactions are executed. </li>
+							<li> Public functions can be invoked in a smart contract by other smart contracts. </li>
+						</ul>
+					</section>
+
+					<section>
+						Initial Coin Offering (ICO)
+						<ul>
+							<li> Initial Coin Offerings are simply smart contracts that keep track of how many coins there are and what accounts they belong to. </li>
+							<li> Security holes and careless programming in smart contracts has led to losses of close to a hundred million dollars of virtual currency. </li>
+							<li> The SEC has declared that ICO's are illegal in the United States unless they are licensed securities. </li>
+						</ul>
+					</section>
+					<section>
+						<section>
+							Distributed Apps - Dapps
+						</sections>
+						<section>
+							<ul>
+								<li> An integration between the web browser, smart contracts, and blockchains via peer to peer protocols. </li>
+								<li> Ethereum allows contracts to be invoked from the web browser. </li>
+								<li> CryptoKitties is now the most famous Dapp. </li>
+								<li> The contract allows people to buy and breed digital cats. </li>
+								<li> Its popularity has slowed transaction processing on Ethereum. </li>
+							</ul>
+						</section>
+					</section>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Markets for buying and selling</h3>
+					<ul>
+						<li> coinbase.com </li>
+						<li> bitstamp.com </li>
+						<li> coinmarketcap.com </li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						Risks
+					</section>
+					<section>
+						<ul>
+							<li> Pure speculation play. </li>
+							<li> Very easy to lose wallets and private keys. </li>
+							<li> Cryptocurrency hackers who try to exploit flaws to steal coins. </li>
+							<li> Third party exchange failures. </li>
+							<li> Legal constraints. </li>
+							<li> Net neutrality. </li>
+							<li> Quantum Computing. </li>
+							<li> New Discoveries and Technology. </li>
+						</ul>
+					</section>
+				</section>
+
+
 			</div>
 		</div>
 
